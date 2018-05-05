@@ -11,7 +11,6 @@ export class ColoumnComponent implements OnInit {
   constructor() { }
 
   @Input() arraytoprint:any;
-  @Input() type:string='';
   @Input() heading:string='';
   @Input() id:string='';
 
