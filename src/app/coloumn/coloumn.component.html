@@ -1,7 +1,7 @@
 <div class="panel panel-warning">
     <div class="panel-heading">{{heading}}</div>
 	    <div class="panel-body">
-	        <form class="form" (ngSubmit)="onSubmit(todoForm)" #todoForm="ngForm">
+	        <form class="form" (ngSubmit)="onSubmit(todoForm);todoForm.reset()" #todoForm="ngForm">
 	          <div class="form-group">
 	            <input type="text" name="addtodo" class="form-control" placeholder="{{'Enter '+heading+' item'}}" [attr.id]="id" required [(ngModel)]="todo[id]" name="{{id}}" #todoTask="ngModel">
 	          </div>

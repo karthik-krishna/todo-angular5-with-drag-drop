@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Todo} from './todo';
 
 @Component({
   selector: 'app-coloumn',
@@ -16,7 +17,7 @@ export class ColoumnComponent implements OnInit {
 
   @Output() newTask = new EventEmitter<any>();
 
-  public todo:any={};
+  public todo:Todo;
 
   ngOnInit() {
     this.todo={
