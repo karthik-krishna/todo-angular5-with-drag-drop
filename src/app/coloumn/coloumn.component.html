@@ -1,0 +1,21 @@
+<div class="panel panel-warning">
+    <div class="panel-heading">{{heading}}</div>
+	    <div class="panel-body">
+	        <form class="form" (ngSubmit)="onSubmit(todoForm)" #todoForm="ngForm">
+	          <div class="form-group">
+	            <input type="text" name="addtodo" class="form-control" placeholder="{{'Enter '+heading+' item'}}" [attr.id]="id" required [(ngModel)]="todo[id]" name="{{id}}" #todoTask="ngModel">
+	          </div>
+	          <div class="form-group text-right">
+	          	<button type="submit" class="btn btn-warning mtb15" [disabled]="!todoForm.form.valid"> Add</button>
+	          </div>
+	        </form>
+	            <div class="panel-body" *ngFor="let task of arraytoprint; let i = index " dnd-sortable-container [sortableData]="arraytoprint" dnd-droppable dnd-draggable [dragEnabled]="true" dnd-sortable [sortableIndex]="i">
+	                <div class="panel panel-default" >
+	                    <div class="panel-body">
+	                    	<div class="text-right"><i class="glyphicon glyphicon-remove" (click)="deleteItem(arraytoprint,i)" ></i></div>
+	                        <div class="wordwrap">{{task.task}}</div>
+	                    </div>
+	                </div>
+	            </div>
+	    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container minheight">
+  <div class="col-sm-4">
+    <app-coloumn [type]="'todo'" [heading]="'To Do'" [id]="'todoTask'" [arraytoprint]="todoTasksArr" (newTask)="onSubmit($event,'todo')" ></app-coloumn>
+  </div>
+  <div class="col-sm-4">
+     <app-coloumn [type]="'todo'" [heading]="'In Progress'" [id]="'progressTask'" (newTask)="onSubmit($event,'progress')" [arraytoprint]="progressTasksArr"></app-coloumn>
+  </div>
+  <div class="col-sm-4">
+     <app-coloumn [type]="'todo'" [heading]="'Done'" [id]="'doneTask'" (newTask)="onSubmit($event,'done')" [arraytoprint]="doneTasksArr"></app-coloumn>
+  </div>
+</div>
